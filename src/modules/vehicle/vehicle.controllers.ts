@@ -104,7 +104,7 @@ const deleteVehicle = async (req: Request, res: Response) => {
       req.params.vehicleId as string
     );
 
-    if (result.rows.length === 0) {
+    if ((result as any).rows.length === 0) {
       return res.status(404).json({
         success: false,
         message: "Vehicle not found",
