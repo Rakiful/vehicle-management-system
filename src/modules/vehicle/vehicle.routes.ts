@@ -6,7 +6,7 @@ const router = Router();
 
 router.post(
   "/vehicles",
-  auth("admin", "customer"),
+  auth("admin"),
   vehicleControllers.createVehicle
 );
 router.get(
@@ -21,12 +21,12 @@ router.get(
 );
 router.put(
   "/vehicles/:vehicleId",
-  auth("admin", "customer"),
+  auth("admin"),
   vehicleControllers.updateVehicle
 );
 router.delete(
   "/vehicles/:vehicleId",
-  auth("admin", "customer"),
+  auth("admin"),
   vehicleControllers.deleteVehicle
 );
 
